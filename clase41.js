@@ -5,22 +5,30 @@
 // tome como argumentos un número numero y un array de números numeros 
 // y devuelva true o false dependiendo de si dicho numero se encuentra en el 
 // array de numeros. Ejemplo:
-const numeros = [1,2,3,54,6]
+
+const numeros = [1, 2, 3, 12, 24, 30, 54, 108, 234]
 
 const contieneNumero = (numero, array) => {
     for (let i = 0; i < array.length; i++) {
-        if (numero === array[i]) {
+        if (array.includes(numero)) {
             true
+        }
+        else {
+            return false
         }
     }
 }
 
+console.log('Ejercicio COMPARA NUMEROS')
 console.log(contieneNumero(54,numeros))
+console.log(contieneNumero(15,numeros))
+console.log(contieneNumero(108,numeros))
 
 
 // Crear una función invertirCaso que tome como argumento un string
 //  y devuelva un string donde cada letra tiene el caso invertido, es decir, 
 // cada letra está mayúscula si estaba en minúscula, y viceversa.
+
 let nombre1 = 'Ada Lovelace'
 let nombre2 = 'feliz cumple' 
 let nombre3 = 'jAvAsCrIpT'
@@ -37,7 +45,8 @@ for (let i = 0; i < string.length; i++) {
 }
 }
 
-console.log(invertirCaso("Ada LOVElaCe"))
+console.log('Ejercicio CAMBIA CASO')
+console.log(invertirCaso('Ada LOVElaCe'))
 console.log(invertirCaso(nombre2))
 console.log(invertirCaso(nombre3))
 
@@ -59,6 +68,7 @@ const compararEmojis = (array) => {
     }
 }
 
+console.log('Ejercicio COMPARA EMOJIS')
 console.log(compararEmojis(gano1))
 
 
@@ -82,5 +92,6 @@ else {
 }
 }
 
+console.log('Ejercicio PERSONAJES JUNTOS')
 console.log(personajesJuntos(array1))
 console.log(personajesJuntos(array2))
